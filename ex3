@@ -1,0 +1,99 @@
+
+from threading import Thread, Event, Lock
+from glob import glob
+import time
+from queue import Queue
+import Semaphore
+import YAMLParser
+
+Queue =queue.keys()
+N = 5
+
+def get_objet_from_file(f_name): #pour afficher les element de la liste
+    while True:
+        parser = YAMLParser(filename=f_name)
+        objet = parser.read()['objet']
+        keys = list(objet.keys())
+        interval = 1
+        print("""
+       
+        Type : {},
+        communication : {},
+        unit : {},
+        
+        """. 
+        objet.get('type'), 
+        objet.get('communication'), 
+        objet.get('unit'))
+        class SimpleThread(threading.Thread):
+    
+    def Malist(keys): 
+        while True:
+            Sem.acquire()
+        while not Queue.empty():
+            print(Queue.get())
+                 Sem.release(3)
+        
+     def read_insert_file(f):  # c'est pour insert un objet
+        parser = YAMLParser(filename=f)
+        print(parser.read())
+        new_objet = dict(
+        {'objet':{
+            'type': "light",
+            'unit': "%",
+            'communication': "%",
+            }
+    
+        })
+    parser.write(lvl='objet', data=new_ojet)
+    return      
+    
+
+        def remplacer(self):# pour remplacer l'objet  
+
+             for index, value in enumerate(keys()):
+         
+                if (keys['type']== new_objet['type']):
+                      keys[index] = new_objet
+                     print(keys)
+                else 
+                     print (keys)
+              
+        def __init__(self, name, role):
+            super().__init__()
+            self.name = name
+            self.role = role
+              
+              
+       def run(self): # la fonction pour effacer/ ajouter
+          if self.role == 'delete':
+             self.delete()
+          else:
+             self.add()
+
+
+      def delete(self):
+              num = random.randint(0, N)
+              del keys[N]
+              print(keys)
+              time.sleep(3)
+        
+      def add(self):
+          keys.append(num[-1])
+          keys.append(num[:-1])
+          print(keys)
+          time.sleep(3)
+
+ 
+        
+T1 = [SimpleThread("Thread {}".format(i), role='delete') for i in range(N-2)]
+T2 = [SimpleThread("Thread {}".format(j), role='add') for j in range(N-2)]
+
+for i, j in zip(T1, T2):
+        i.start()
+        j.start()
+        time.sleep(3)
+    
+for i, j in zip(T1, T2):
+        i.join()
+        j.join()

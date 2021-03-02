@@ -1,0 +1,21 @@
+liste d'objet:
+  objet 1:
+    
+ type : light
+ unit :lux
+ communication :objet3
+ 
+  objet 2:
+ type : light1
+ unit :lux
+ communication :objet1
+ 
+ objet 3:
+ type : light2
+ unit :lux
+ communication :objet2
+ 
+ objet 4:
+ type : light3
+ unit :lux
+ communication :objet5
